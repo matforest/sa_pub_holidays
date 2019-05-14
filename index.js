@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
     res.send('ok');
 });
 
-let port = process.argv[2];
+let port = process.env.PORT || 8888;
 let httpServer = app.listen(port, function () {
     console.log("Listening on port " + port);
 });
