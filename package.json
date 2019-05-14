@@ -1,0 +1,21 @@
+{
+  "name": "sa_pub_holidays",
+  "version": "1.0.0",
+  "description": "A South Australian filter of Google's Australian public holiday calendar",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "icalendar": "^0.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://matforest@bitbucket.org/matforest/sa_pub_holidays.git"
+  },
+  "author": "MForest",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/matforest/sa_pub_holidays#readme"
+}
