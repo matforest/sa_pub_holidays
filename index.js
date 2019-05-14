@@ -6,7 +6,8 @@ var app = express();
 const https = require('https');
 const filter = require('./lib/filter')
 
-app.get("/calendar/saholidays", sendSACalendar);
+let calRoute = "/cal";
+app.get(calRoute, sendSACalendar);
 function sendSACalendar(req, res) {
 
     console.log(`New request received from IP '${req.ip}'`);
@@ -33,7 +34,7 @@ function sendSACalendar(req, res) {
 
 // TESTING FIXME
 app.get('/', (req, res) => {
-    res.send('ok');
+    res.send('ok, see ' + calRoute);
 });
 
 let port = process.env.PORT || 8888;
