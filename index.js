@@ -1,4 +1,4 @@
-console.log('Running calendar stuff');
+console.log('SA Calendar Filter started');
 
 var express = require('express');
 var app = express();
@@ -8,6 +8,8 @@ const filter = require('./lib/filter')
 
 app.get("/calendar/saholidays", sendSACalendar);
 function sendSACalendar(req, res) {
+
+    console.log(`New request received from IP '${req.ip}'`);
 
     let holidayUrl = "https://calendar.google.com/calendar/ical/en.australian%23holiday%40group.v.calendar.google.com/public/basic.ics";
     https.get(holidayUrl, (incomingMessage) => {
